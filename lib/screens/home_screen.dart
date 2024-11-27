@@ -1,4 +1,10 @@
+import 'package:components/screens/alerts_screen.dart';
+import 'package:components/screens/animations_screen.dart';
+import 'package:components/screens/buttons_screen.dart';
+import 'package:components/screens/forms_screen.dart';
+import 'package:components/screens/infinity_scroll_screen.dart';
 import 'package:components/screens/layout_screen.dart';
+import 'package:components/screens/lists_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -62,38 +68,50 @@ class HomeScreen extends StatelessWidget {
 
           ListTile(
             title: const Text("Tipos de lista"),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, ListsScreen.routeName);
+            },
             trailing: const Icon(Icons.arrow_forward_ios),
             leading: const Icon(Icons.list),
           ),
 
           ListTile(
             title: const Text("Botones"),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, ButtonsScreen.routeName);
+            },
             trailing: const Icon(Icons.arrow_forward_ios),
           ),
 
           ListTile(
             title: const Text("Alertas"),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, AlertsScreen.routeName);
+            },
             trailing: const Icon(Icons.arrow_forward_ios),
           ),
 
           ListTile(
             title: const Text("Formularios"),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, FormsScreen.routeName);
+            },
             trailing: const Icon(Icons.arrow_forward_ios),
           ),
 
           ListTile(
             title: const Text("Infinity scroll"),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, InfinityScrollScreen.routeName);
+            },
             trailing: const Icon(Icons.arrow_forward_ios),
           ),
 
           ListTile(
             title: const Text("Animaciones"),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, AnimationsScreen.routeName);
+            },
             trailing: const Icon(Icons.arrow_forward_ios),
           ),
         ],
