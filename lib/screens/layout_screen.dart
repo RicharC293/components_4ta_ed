@@ -7,6 +7,26 @@ class LayoutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Layout"),
+        // Widget custom
+        leading: IconButton(
+          onPressed: (){
+            /// Navegación hacia atrás 
+            /// push -> ir hacia adelante
+            /// pop -> ir hacia atrás
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
+      ),
+      /// 1. Column
+      /// 2. Row
+      /// 3. Container
+      body: Column(
+        children: [],
+      ),
+    );
   }
 }

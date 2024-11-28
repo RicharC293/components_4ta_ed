@@ -38,6 +38,8 @@ class HomeScreen extends StatelessWidget {
               //     builder: (context) => const LayoutScreen(),
               //   ),
               // );
+              // https://docs.flutter.dev/cookbook/animation/page-route-animation
+              // Animated navigation
               // Navigator.push(
               //   context,
               //   MaterialPageRoute(
