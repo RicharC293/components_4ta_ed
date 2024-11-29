@@ -68,9 +68,88 @@ class ButtonsScreen extends StatelessWidget {
               ),
 
               /// 2. OutlinedButton
+              const Text("Outlined Button"),
+              // Center -> Centra el widget
+              // Align -> Alinea el widget -> alignment: Alignment.center
+              Align(
+                alignment: Alignment.center,
+                child: SizedBox(
+                  width: 300,
+                  height: 50,
+                  child: OutlinedButton(
+                    onPressed: () {
+                      print("Outlined Button");
+                    },
+                    // style: ButtonStyle(
+                    //   backgroundColor: WidgetStateProperty.all(Colors.amber),
+                    // ),
+                    child: const Text("OutlinedButton"),
+                  ),
+                ),
+              ),
+
               /// 3. TextButton
+              const Text("Text Button"),
+              TextButton(
+                onPressed: () {
+                  print("Text Button");
+                },
+                child: const Text("TextButton"),
+              ),
+
               /// 4. ElevatedButton
+              const Text("Elevated Button"),
+              ElevatedButton(
+                onPressed: () {
+                  print("Elevated Button");
+                },
+                child: const Text("ElevatedButton"),
+              ),
+
               /// 5. IconButton
+              const Text("Icon Button"),
+              Center(
+                child: IconButton(
+                  onPressed: () {
+                    print("Icon Button");
+                  },
+                  icon: const Icon(Icons.balance_rounded),
+                  iconSize: 25,
+                  tooltip: "Balance",
+                ),
+              ),
+
+              /// 6. Texto e icono
+              /// https://flutter.github.io/samples/web/material_3_demo/
+              FilledButton.icon(
+                onPressed: () {},
+                label: const Text("With Icon"),
+                icon: const Icon(Icons.ac_unit),
+              ),
+
+              /// 7. Estilos de texto
+              /// 7.1 Abierta
+              const Text(
+                "Texto con estilos",
+                style: TextStyle(
+                  color: Colors.red,
+                  // fontSize -> tamaño de la fuente
+                  fontSize: 25,
+
+                  /// fontWeight -> peso de la fuente
+                  fontWeight: FontWeight.w900,
+                  // fontStyle -> estilo de la fuente
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+
+              /// 7.2 Cerrada -> context
+              /// Theme.of(context) -> Tema actual de la aplicación
+              /// Theme.of(context).textTheme -> Los estilos de texto
+              Text(
+                "Texto con estilos",
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
             ],
           ),
         ],
