@@ -132,7 +132,9 @@ class ButtonsScreen extends StatelessWidget {
               const Text(
                 "Texto con estilos",
                 style: TextStyle(
-                  color: Colors.red,
+                  // color -> color del texto
+                  // Hexadecimal -> 0xff000000
+                  color: Color(0xff606060),
                   // fontSize -> tamaño de la fuente
                   fontSize: 25,
 

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AlertsScreen extends StatelessWidget {
@@ -24,13 +25,17 @@ class AlertsScreen extends StatelessWidget {
                   builder: (context) {
                     /// 2. Retornar un AlertDialog
                     return AlertDialog(
-                      title: Text("Alerta Android"),
-                      content: Text("Este es un mensaje de alerta en Android"),
+                      title: const Text("Alerta Android"),
+                      content:
+                          const Text("Este es un mensaje de alerta en Android"),
                       actions: [
                         /// 3. Agregar los botones
                         /// Botón cancelar -> OutinedButton
                         OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            /// Cerrar la modal
+                            Navigator.pop(context);
+                          },
                           child: const Text("Cancelar"),
                         ),
 
@@ -47,7 +52,38 @@ class AlertsScreen extends StatelessWidget {
               child: const Text("Alerta Android"),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                // 1. Usar el showCupertinoDialog
+                showCupertinoDialog(
+                  context: context,
+                  builder: (context) {
+                    /// 2. Retornar un CupertinoAlertDialog
+                    return CupertinoAlertDialog(
+                      title: const Text("Alerta iOS"),
+                      content: const Text("Esto es un contenido de iOS"),
+                      actions: [
+                        /// 3. Agregar los botones
+                        CupertinoDialogAction(
+                          onPressed: () {
+                            /// Cerrar la modal
+                            Navigator.pop(context);
+                          },
+                          isDestructiveAction: true,
+                          child: const Text("Cancelar"),
+                        ),
+
+                        CupertinoDialogAction(
+                          onPressed: (){},
+                          isDefaultAction: true,
+                          child: const Text("Aceptar"),
+                        ),
+
+
+                      ],
+                    );
+                  },
+                );
+              },
               child: const Text("Alerta iOS"),
             ),
             TextButton(
