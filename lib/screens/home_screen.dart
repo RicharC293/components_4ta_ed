@@ -1,6 +1,7 @@
 import 'package:components/screens/alerts_screen.dart';
 import 'package:components/screens/animations_screen.dart';
 import 'package:components/screens/buttons_screen.dart';
+import 'package:components/screens/forms_2_screen.dart';
 import 'package:components/screens/forms_screen.dart';
 import 'package:components/screens/infinity_scroll_screen.dart';
 import 'package:components/screens/layout_screen.dart';
@@ -94,9 +95,17 @@ class HomeScreen extends StatelessWidget {
           ),
 
           ListTile(
-            title: const Text("Formularios"),
+            title: const Text("Imagenes"),
             onTap: () {
               Navigator.pushNamed(context, FormsScreen.routeName);
+            },
+            trailing: const Icon(Icons.arrow_forward_ios),
+          ),
+
+          ListTile(
+            title: const Text("Formularios"),
+            onTap: () {
+              Navigator.pushNamed(context, Forms2Screen.routeName);
             },
             trailing: const Icon(Icons.arrow_forward_ios),
           ),

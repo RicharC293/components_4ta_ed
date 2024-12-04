@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:components/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 
 class FormsScreen extends StatelessWidget {
@@ -110,8 +111,8 @@ class FormsScreen extends StatelessWidget {
               /// 6. Switch -> Activar o desactivar una opción -> https://api.flutter.dev/flutter/material/Switch-class.html
 
               /// TextField
-               Padding(
-                padding:const EdgeInsets.all(16.0),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
                 child: TextField(
                   /// Características de los teclados
                   keyboardType: TextInputType.emailAddress,
@@ -137,6 +138,7 @@ class FormsScreen extends StatelessWidget {
                   onChanged: (value) {
                     print(value);
                   },
+
                   /// Cada vez que haga click en el botón de enviar
                   onSubmitted: (value) {
                     print(value);
@@ -146,12 +148,16 @@ class FormsScreen extends StatelessWidget {
                     print("Tap");
                   },
 
+                  /// Mascaras, limitar un tipo de dato en específico
+                  // inputFormatters: [
+                  // ],
+
                   // onSave
                   // onEditingComplete
                   // validator
 
                   /// InputDecoration -> Decoración del campo
-                  decoration:  InputDecoration(
+                  decoration: const InputDecoration(
                     /// Placeholder -> hintText -> Texto que se muestra cuando no hay nada escrito -> test@ejemplo.com
                     hintText: "test@test.com",
                     // Actualizar los estilos del hint
@@ -182,7 +188,10 @@ class FormsScreen extends StatelessWidget {
                     // ),
 
                     /// Icono al inicio del campo
-                    prefixIcon: Icon(Icons.email, color: Colors.red,),
+                    prefixIcon: Icon(
+                      Icons.email,
+                      color: Colors.red,
+                    ),
 
                     /// Icono al final del campo
                     suffixIcon: Icon(Icons.remove_red_eye),
@@ -195,6 +204,8 @@ class FormsScreen extends StatelessWidget {
                 },
                 child: const Text("Unfocus"),
               ),
+            
+              
             ],
           ),
         ),

@@ -1,6 +1,7 @@
 import 'package:components/screens/alerts_screen.dart';
 import 'package:components/screens/animations_screen.dart';
 import 'package:components/screens/buttons_screen.dart';
+import 'package:components/screens/forms_2_screen.dart';
 import 'package:components/screens/forms_screen.dart';
 import 'package:components/screens/home_screen.dart';
 import 'package:components/screens/infinity_scroll_screen.dart';
@@ -22,6 +23,8 @@ final routes = {
 
   /// forms_screen.dart
   FormsScreen.routeName: (context) => const FormsScreen(),
+
+  Forms2Screen.routeName: (context) => const Forms2Screen(),
 
   /// infinity_scroll_screen.dart
   InfinityScrollScreen.routeName: (context) => const InfinityScrollScreen(),
