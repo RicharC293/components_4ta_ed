@@ -132,6 +132,24 @@ class FormsScreen extends StatelessWidget {
                   obscureText: true,
                   obscuringCharacter: "*",
 
+                  /// Acciones
+                  /// Cada vez que haga click en un botón del teclado
+                  onChanged: (value) {
+                    print(value);
+                  },
+                  /// Cada vez que haga click en el botón de enviar
+                  onSubmitted: (value) {
+                    print(value);
+                  },
+
+                  onTap: () {
+                    print("Tap");
+                  },
+
+                  // onSave
+                  // onEditingComplete
+                  // validator
+
                   /// InputDecoration -> Decoración del campo
                   decoration:  InputDecoration(
                     /// Placeholder -> hintText -> Texto que se muestra cuando no hay nada escrito -> test@ejemplo.com
