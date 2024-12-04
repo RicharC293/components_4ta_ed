@@ -198,6 +198,7 @@ class _Forms2ScreenState extends State<Forms2Screen> {
                 /// 2. Cédula: 1234567890
                 /// 3. Correo:
                 /// 4. Contraseña:
+                /// 5. Botón de limpiar todos los campos
               ],
             ),
           ),
